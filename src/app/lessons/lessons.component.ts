@@ -9,7 +9,6 @@ import { LessonService } from '../lesson.service';
 })
 export class LessonsComponent implements OnInit {
   lessons : Lesson[];
-  selectedLesson: Lesson;
 
   constructor(private lessonService: LessonService) { }
   ngOnInit() {
@@ -19,9 +18,4 @@ export class LessonsComponent implements OnInit {
   getLessons(): void {
     this.lessonService.getLessons().subscribe(lessons => this.lessons = lessons);
   }
-  
-  onSelect(lesson: Lesson): void {
-    this.selectedLesson = lesson;
-  }
-
 }

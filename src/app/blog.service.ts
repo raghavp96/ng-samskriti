@@ -15,4 +15,9 @@ export class BlogService {
     this.messageService.add('BlogService: fetched blogs');
     return of(BLOGS);
   }
+
+  getBlog(id: number): Observable<Blog> {
+    this.messageService.add(`BlogService: fetched blog id= ${id}`);
+    return of(BLOGS.find(blog => blog.id === id));
+  }
 }

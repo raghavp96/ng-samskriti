@@ -1,11 +1,10 @@
 <div>
   <h3> All Blogs </h3>
   <ul class="blogs">
-      <li *ngFor="let blog of blogs" 
-            [class.selected]="blog === selectedBlog" 
-            (click)="onSelect(blog)">
-            {{ blog.title }}
+      <li *ngFor="let blog of blogs">
+        <a routerLink="/blog/{{blog.id}}">
+            {{ blog.id }}. {{ blog.title }}
+        </a>
       </li>
   </ul>
-  <app-blog [blog]="selectedBlog"></app-blog>
 </div>

@@ -9,7 +9,6 @@ import { BlogService } from '../blog.service';
 })
 export class BlogsComponent implements OnInit {
   blogs : Blog[];
-  selectedBlog: Blog;
 
   constructor(private blogService: BlogService) { }
   ngOnInit() {
@@ -19,9 +18,4 @@ export class BlogsComponent implements OnInit {
   getBlogs(): void {
     this.blogService.getBlogs().subscribe(blogs => this.blogs = blogs);
   }
-  
-  onSelect(blog: Blog): void {
-    this.selectedBlog = blog;
-  }
-
 }

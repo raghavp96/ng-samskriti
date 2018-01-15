@@ -1,11 +1,10 @@
 <div>
   <h3> All Lessons </h3>
   <ul class="lessons">
-      <li *ngFor="let lesson of lessons" 
-            [class.selected]="lesson === selectedLesson" 
-            (click)="onSelect(lesson)">
-            {{ lesson.title }}
+      <li *ngFor="let lesson of lessons">
+        <a routerLink="/lesson/{{lesson.id}}">
+            {{ lesson.id }}. {{ lesson.title }}
+        </a>
       </li>
   </ul>
-  <app-lesson [lesson]="selectedLesson"></app-lesson>
 </div>

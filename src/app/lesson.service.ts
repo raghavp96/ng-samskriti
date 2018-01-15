@@ -16,4 +16,9 @@ export class LessonService {
     return of(LESSONS);
   }
 
+  getLesson(id: number): Observable<Lesson> {
+    this.messageService.add(`LessonService: fetched lesson id= ${id}`);
+    return of(LESSONS.find(lesson => lesson.id === id));
+  }
+
 }
