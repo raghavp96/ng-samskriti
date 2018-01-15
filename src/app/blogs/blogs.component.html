@@ -1,0 +1,11 @@
+<div>
+  <h3> All Blogs </h3>
+  <ul class="blogs">
+      <li *ngFor="let blog of blogs" 
+            [class.selected]="blog === selectedBlog" 
+            (click)="onSelect(blog)">
+            {{ blog.title }}
+      </li>
+  </ul>
+  <app-blog [blog]="selectedBlog"></app-blog>
+</div>

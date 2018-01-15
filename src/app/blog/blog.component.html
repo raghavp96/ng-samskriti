@@ -1,0 +1,12 @@
+<div>
+  <div *ngIf="blog">
+      <div class="box">
+            <h3> {{ blog.title }} </h3>
+            <div>{{ blog.author }}, {{ blog.date }}</div>
+            <!-- <div>{{ blog.text }}</div> --> <!-- Commenting this out to do inline editing of blogs, which isn't a feature we need but will be useful to know how to do -->
+            <label>text:
+                <input [(ngModel)]="blog.text" placeholder="Enter text here">
+            </label>
+        </div>
+  </div>
+</div>

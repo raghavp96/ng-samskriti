@@ -1,0 +1,24 @@
+ul {
+    list-style: none;
+}
+
+.selected {
+  background-color: #CFD8DC !important;
+  color: white;
+}
+
+.blogs li {
+  cursor: pointer;
+  position: relative;
+  left: 0;
+  background-color: #EEE;
+  margin: .5em;
+  padding: .3em 0;
+  height: 1.6em;
+  border-radius: 4px;
+}
+
+.box {
+    text-align: center;
+    border: 1px solid;
+}
